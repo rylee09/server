@@ -36,3 +36,8 @@ exports.getUser = (req, res) => {
 
 
 // create a method for adding new user
+exports.addUser = (req,res)=>{
+    const {username} = req.body
+    console.log(username)
+    res.send(username)
+}
