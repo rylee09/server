@@ -1,4 +1,4 @@
-const { getUsers, getUser, updateUser } = require("../controllers/userController");
+const { getUsers, getUser, updateUser, addUser } = require("../controllers/userController");
 
 const express = require("express");
 const router = express.Router();

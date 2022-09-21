@@ -29,6 +29,12 @@ exports.getUser = (req, res) => {
 // create a method for adding new user
 exports.addUser = (req, res) => {
   const { username } = req.body;
-  console.log(username);
-  res.send("admin");
+  let sql = "INSERT INTO `test`.`userapp` (`username`) VALUES (?);";
+  db.query(sql, [username], (err, result) => {
+    if (err) {
+      throw err;
+    } else {
+      res.json("added successfully");
+    }
+  });
 };
